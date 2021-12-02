@@ -1,0 +1,88 @@
+<div class="sidebar">
+    <div class="sidebar__inner">
+        <div class="sidebar__item block-margin-bottom-xs">
+            {% include sidebar/popular_posts.html %}
+        </div>
+        <div class="sidebar__item block-margin-bottom-xs">
+            <div class="sidebar__item-title heading-5 text-font-weight-bold">Категории</div>
+            <div class="sidebar__menu">
+<!--                <ul class="sidebar__menu-list">-->
+<!--                    <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"><span class="sidebar__menu-text">HTML/CSS</span> <span class="sidebar__menu-count">1</span></a></li>-->
+<!--                    <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"><span class="sidebar__menu-text">JavaScript</span> <span class="sidebar__menu-count">29</span></a></li>-->
+<!--                    <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"><span class="sidebar__menu-text">Инструменты</span> <span class="sidebar__menu-count">7</span></a></li>-->
+<!--                    <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"><span class="sidebar__menu-text">Статьи и советы</span> <span class="sidebar__menu-count">13</span></a></li>-->
+<!--                    <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"><span class="sidebar__menu-text">Linux</span> <span class="sidebar__menu-count">10</span></a></li>-->
+<!--                    <li class="sidebar__menu-item"><a href="#" class="sidebar__menu-link"><span class="sidebar__menu-text">HTML/CSS</span> <span class="sidebar__menu-count">5</span></a></li>-->
+<!--                </ul>-->
+
+                <ul class="sidebar__menu-list">
+                    {% assign tags_list = site.categories %}
+                    {% if tags_list.first[0] == null %}
+                    {% for tag in tags_list %}
+                    <li class="sidebar__menu-item"><a class="sidebar__menu-link" href="categories/{{ tag }}"><span class="sidebar__menu-text">{{ tag | capitalize }}</span> <span class="sidebar__menu-count">{{ site.tags[tag].size }}</span></a></li>
+                    {% endfor %}
+                    {% else %}
+                    {% for tag in tags_list %}
+                    <li class="sidebar__menu-item"><a class="sidebar__menu-link" href="categories/{{ tag[0] }}"><span class="sidebar__menu-text">{{ tag[0] | capitalize }}</span> <span class="sidebar__menu-count">{{ tag[1].size }}</span></a></li>
+                    {% endfor %}
+                    {% endif %}
+                    {% assign tags_list = nil %}
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar__item block-margin-bottom-xs">
+            <div class="sidebar__item-title heading-5 text-font-weight-bold">Поиск</div>
+            <div class="search__block">
+                <form role="search" method="get" id="searchform" class="form-search">
+                    <div class="form-item">
+                        <input type="text" class="form-input" name="s" id="s" placeholder="Search Keywords...">
+                        <input type="submit" id="searchsubmit" class="button-primary button-xs button"  value="Поиск">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="sidebar__item block-margin-bottom-xs">
+            <div class="sidebar__item-title heading-5 text-font-weight-bold">Мы в телеграм</div>
+            <div class="telegram__button text-padding-md">
+                <a href="#" class="button button-secondary button-lg button-icon-right text-width-100 text-center">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<circle style="fill:#41B4E6;" cx="255.997" cy="256" r="255.997"/>
+                        <path style="fill:#0091C8;" d="M512,256.003c0-6.238-0.235-12.419-0.673-18.546L405.228,131.36L106.772,248.759l114.191,114.192  l1.498,5.392l1.939-1.955l0.008,0.008l-1.947,1.947L348.778,494.66C444.298,457.5,512,364.663,512,256.003z"/>
+                        <polygon style="fill:#FFFFFF;" points="231.138,293.3 346.829,380.647 405.228,131.36 106.771,248.759 197.588,278.84   363.331,167.664 "/>
+                        <polygon style="fill:#D2D2D7;" points="197.588,278.84 222.461,368.344 231.138,293.3 363.331,167.664 "/>
+                        <polygon style="fill:#B9B9BE;" points="268.738,321.688 222.461,368.344 231.138,293.3 "/>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+                        <g>
+</g>
+</svg></a>
+            </div>
+        </div>
+    </div>
+</div>

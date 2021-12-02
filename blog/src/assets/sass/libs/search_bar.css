@@ -1,0 +1,84 @@
+body {
+    background-color: #212121;
+    background-image: url("http://wallpanda.com/wp-content/uploads/2015/05/Hd-backgrounds-premium-widescreen-hd-4-backgrounds-for-free-download-hd.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: "Open Sans", sans-serif;
+}
+
+#search-menu {
+    position: fixed;
+    width: 100%;
+    height: 20em;
+    top: -20em;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    z-index: 9999;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(50%, rgba(0, 0, 0, 0.8)), color-stop(100%, rgba(0, 0, 0, 0.01)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.01) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cc000000", endColorstr="#1a000000",GradientType=0);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 500ms ease all;
+    -moz-transition: 500ms ease all;
+    transition: 500ms ease all;
+}
+#search-menu.toggled {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+#search-menu .wrapper {
+    position: relative;
+    margin: 3em auto 0 auto;
+    padding: 0 1em;
+}
+#search-menu .wrapper input {
+    width: 90%;
+    padding: 0 0 0.125em 0;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #bfbfbf;
+    font-size: 4em;
+    color: #bfbfbf;
+}
+#search-menu .wrapper input:focus {
+    outline: none;
+}
+#search-menu .wrapper button {
+    position: absolute;
+    display: block;
+    width: 10%;
+    right: 0;
+    top: 0;
+    background: transparent;
+    border: none;
+    color: #bfbfbf;
+    font-size: 4em;
+    -webkit-transition: 500ms ease all;
+    -moz-transition: 500ms ease all;
+    transition: 500ms ease all;
+}
+#search-menu .wrapper button:hover {
+    color: #fff;
+}
+#search-menu .wrapper button:focus {
+    outline: none;
+}
+
+.header__search-btn {
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: 500ms ease all;
+    -moz-transition: 500ms ease all;
+    transition: 500ms ease all;
+}
+.header__search-btn:hover {
+    color: #fff;
+}

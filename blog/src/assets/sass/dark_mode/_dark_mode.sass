@@ -1,0 +1,48 @@
+.dark-mode
+  .dark-light
+    svg
+      fill: #ffce45
+      stroke: #ffce45
+.dark-light
+  svg
+    fill: transparent
+    transition: 0.5s
+
+
+\:root
+  --color-mode: 'light'
+  --color-primary-text: #181818
+  --color-secondary-text: #ffffff
+  --color-bg: #fff
+  --color-header-bg: #2b2a29
+  --sidebar-bg-color: #fff
+  --footer-bg-color: #091B2D
+  transition: 0.3s ease-in-out
+  --fisrt-screen-bg-color: #000
+
+@media (prefers-color-scheme: dark)
+  \:root
+    --color-mode: 'dark'
+  \:root:not([data-user-color-scheme])
+    --color-bg: #2b2a29
+    --color-primary-text: #fff
+    --color-secondary-text: #181818
+    --color-header-bg: #fff
+    --bg-img: url('../../assets/img/body_bg-3.svg')
+    --sidebar-bg-color: #091B2D
+    --footer-bg-color: transparent
+    --fisrt-screen-bg-color: #fff
+    transition: 0.3s ease-in-out
+
+
+[data-user-color-scheme="dark"]
+  --color-primary-text: #fff
+  --color-secondary-text: #181818
+  --color-bg: #2b2a29
+  --color-header-bg: #fff
+  --bg-img: url('../../assets/img/body_bg-3.svg')
+  --sidebar-bg-color: #091B2D
+  --footer-bg-color: transparent
+  transition: 0.3s ease-in-out
+  --fisrt-screen-bg-color: #fff
+

@@ -1,0 +1,75 @@
+<main class="page-content blog-detail block-margin-top-md block-margin-bottom-lg">
+    <div class="container container-md">
+        <div class="blog__inner flex  grid grid-sidebar grid-gap-2">
+            <div>
+                <article class="post">
+                    <div class="post-img border-radius-md block-margin-bottom-xs" >
+                        <a href="{{ page.image }}" data-src="{{ page.image }}" data-fancybox="gallery">
+                            <picture>
+                                <source srcset="{{ page.image }}" type="image/webp">
+                                <source srcset="{{ page.image }}" type="image/png">
+                                <source srcset="{{ page.image }}" type="image/jpg">
+                                <source srcset="{{ page.image }}" type="image/jpeg">
+                                <img src="{{ page.image }}" alt="{{ page.description }}"  >
+                            </picture>
+                        </a>
+                    </div>
+                    <header class="block-margin-bottom-sm">
+                        <div class="post-categories text-center block-margin-bottom-sm">
+                            <a href="/{{ site.category_dir }}/{{ page.categories }}" class="hover-color-primary-300">{{ page.catname }} </a>
+                        </div>
+                        <h1 class="post-title heading-1 text-center">{{ page.title }}</h1>
+                        <div class="post-media flex flex-justify-center flex-align-items-center">
+                            <div class="date-mc post-media-item">
+                                <span>{{ page.date | date: "%-d-%m-%Y %H:%M" }}</span>
+                            </div>
+                            <div class="post-author post-media-item">
+                                <a class="post-author-link author-mc text-color-primary-300" href="#"><span class="post__item-author-icon icon-user"></span><span>{{ page.author }}</span></a>
+                            </div>
+                            <a href="#" class="post-media-item post-comments icon-count-mc text-color-primary-300 ">
+                                <span class="post-comments-icon icon_comment"></span>
+                                <span class="post-comments-count">22</span>
+                            </a>
+                        </div>
+                    </header>
+                    <div class="post-content content toc">
+                        {{ page.content }}
+                    </div>
+                    <footer>
+                        <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="fDXbbhyt" data-limit="5" data-color="45AB92" data-dislikes="1" data-colorful="1"></script>
+                    </footer>
+                </article>  <!-- end article .post-->
+                <div class="post-nav flex flex-justify-space-between ">
+                    <div class="post-nav-prev text-left flex-col flex-col-6">
+                        {% if page.previous.url %}
+                        <a class="post-nav-link" href="{{page.previous.url}}">
+                            <p class="text-margin-bottom-xs">Prev Post</p>
+                            <h3 class="post-nav-title text-font-weight-bold">{{page.previous.title}}</h3>
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="post-nav-next text-right flex-col flex-col-6">
+                        {% if page.next.url %}
+                        <a class="post-nav-link" href="{{page.next.url}}">
+                            <p class="text-margin-bottom-xs">Next Post</p>
+                            <h3 class="post-nav-title text-font-weight-bold">{{page.next.title}}</h3>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div> <!-- post-nav -->
+                <div class="blog-related">
+                    <h2 class="blog-related-title">Related posts</h2>
+                    <div class="flex">
+                        {% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample:4 %}
+                        {% for post in posts %}
+                        {% include posts/post__item-col-6.html %}
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div> <!-- end div-->
+            {% include std/sidebar.html %}
+        </div>
+    </div>
+</main>
+

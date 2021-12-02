@@ -1,0 +1,16 @@
+/* .product__list
+    -5-col
+    -4-col
+    -3-col
+    -1-2-col
+    -2-1-col
+ */
+.product__list
+  display: grid
+  grid-gap: 2rem
+  &-5-col
+    grid-template-columns: repeat(5,1fr)
+  &-4-col
+    grid-template-columns: repeat(4,1fr)
+  &-3-col
+    grid-template-columns: repeat(3,1fr)

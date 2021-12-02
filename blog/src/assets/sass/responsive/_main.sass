@@ -1,0 +1,25 @@
+
+@media screen and (max-width: 1024px)
+  body
+    font-size: 0.8rem
+  .header
+    flex-wrap: wrap
+    &__menu
+      display: none
+  .blog
+    &__inner
+      grid-template-columns: 6fr 4fr
+  .blog-related
+    .flex-col-6
+      max-width: 100%
+      flex: 0 0 100%
+@media screen and (max-width: 920px)
+  .blog
+    &__inner
+      grid-template-columns: 5fr 4fr
+
+
+@media screen and (max-width: 768px)
+  .blog
+    &__inner
+      grid-template-columns: 1fr

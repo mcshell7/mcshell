@@ -1,0 +1,26 @@
+.footer
+  /* colors */
+  background-color: var(--footer-bg-color)
+  color: $white-std
+  border-top: 0.5px solid rgba($white-std, 0.5)
+  padding: 2rem
+  /* sizes */
+  min-height: 3.333rem
+  &__inner
+    /* flex */
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+  &__item
+    &:not(:last-child)
+      margin-right: 5rem
+  &__menu-link
+    font-size: .875rem
+    line-height: 1.4em
+    padding: 0 0 .7rem 0
+    font-weight: 400
+    text-transform: uppercase
+  &__menu-title
+    color: $white
+    margin-bottom: 1em
+    text-transform: uppercase

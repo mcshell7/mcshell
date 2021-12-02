@@ -1,0 +1,49 @@
+.sidebar
+  height: 100%
+  &__inner
+    transition: 0.5s ease-in-out
+    position: sticky
+    top: 75px
+  &__item-title
+    /* sizes */
+    margin-bottom: 1.3em
+    /* text */
+    text-align: center
+    text-transform: uppercase
+  &__item
+    background-color: var(--sidebar-bg-color)
+    /* sizes */
+    border-radius: 10px
+    padding: 1.3rem
+    border: 1px solid $gray
+  &__menu-count
+    margin-left: auto
+    padding: 0 0.5rem
+
+
+
+.sidebar__menu
+  &-list
+  &-item
+    width: 100%
+    &:not(:last-child)
+      border-bottom: 1px solid rgba(#000,.1)
+  &-link
+    display: flex
+    position: relative
+    line-height: 1em
+    font-size: 0.9rem
+    padding: 1.2rem 0 1.2rem 1.7rem
+    width: 100%
+    &:hover
+      transition: 0.3s ease-in-out
+      &:before
+        left: 5px
+        transition: 0.3s ease-in-out
+    &:before
+      transition: 0.3s ease-in-out
+      position: absolute
+      left: 0
+      content: '\e649'
+      font-family: $font-themify-icons
+

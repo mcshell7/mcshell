@@ -1,0 +1,41 @@
+<div class="text-padding-sm flex-col-12 post__item-col-12"><article class="post__item ">
+    <div class="post__item-img">
+        <a href="{{ post.url }}">
+            <picture>
+                <source srcset="{{ post.image }}" type="image/webp">
+                <img src="{{ post.image }}" alt="">
+            </picture>
+        </a>
+    </div>
+    <div class="post__item-content">
+        <div class="post__item-media text-margin-bottom-xs">
+            <div class="">
+                <span class="category-item-mc"><a class=" text-uppercase" href="{{ post.url }}">{{ post.catname }}</a></span>
+            </div>
+        </div>
+        <div class="post__item-title title heading-3">
+            <a class="hover-color-primary-300" href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+        <div class="post__item-description text-margin-bottom-md text-color-dark-gray-600">
+            {{ post.description }}
+        </div>
+        <div class="post__item-media flex-justify-start">
+            <div class="post__item-date date-mc text-margin-right-xs">
+                <span>{{ post.date | date: "%-d-%m-%Y %H:%M" }}</span>
+            </div>
+            <div class="post__item-author text-margin-right-xs">
+                <a class="post__item-author-link author-mc text-color-primary-300" href=" {{ post.url }}"><span class="post__item-author-icon icon-user"></span><span> {{ post.author }}</span></a>
+            </div>
+            <div class="post__item-media-icons">
+                <a href="{{ post.url }}#disqus_thread" class="post__item-views icon-count-mc text-color-primary-300 text-margin-right-xs">
+                    <span class="post__item-comments-icon icon-eye"></span>
+                    <span class="post__item-comments-count"></span>
+                </a>
+                <a href="#" class="post__item-comments icon-count-mc text-color-primary-300 ">
+                    <span class="post__item-comments-icon icon_comment"></span>
+                    <span class="post__item-comments-count"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</article> <!-- end post__item --></div><!-- end  flex-col-->

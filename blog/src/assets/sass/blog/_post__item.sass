@@ -1,0 +1,144 @@
+.post__item
+  /* sizes */
+  width: 100%
+  border-radius: 10px
+  /* colors */
+  background-color: #ffffff
+  color: $black-std
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px
+  overflow: hidden
+  transition: 0.3s ease-in-out
+  &:hover
+    transition: 0.3s ease-in-out
+    .post__item-img
+      > a
+        &:after
+          opacity: 1
+          transition: 0.3s ease-in-out
+          background-color: rgba($color-dark-gray-900,0.1)
+  &:not(&-col-12)
+    .post__item-description
+      overflow: hidden
+    .post__item-media-icons
+      margin-left: auto
+  &-col-1
+    width: 100%
+  &-col-12
+    .post__item-title
+      margin-bottom: 0.8rem
+    .post__item-content
+      padding: 2rem
+    .post__item-description
+      font-size: 1.1rem
+      line-height: 1.45em
+    .post__item-img
+      max-height: 400px
+      min-height: 250px
+      height: auto
+      overflow: hidden
+      a
+        height: 100%
+        img
+          height: 100%
+          object-fit: cover
+
+  &-content
+    /* sizes */
+    padding: 1rem
+    /* flex */
+    display: flex
+    flex-direction: column
+  &-title
+    /* colors */
+    color: $black-std
+  &-img
+    /* sizes */
+    position: relative
+    height: 250px
+    flex-shrink: 0
+    img,a
+      /* sizes */
+    img
+      /* sizes */
+      height: 100%
+      width: 100%
+      object-fit: cover
+    > a
+      /* sizes */
+      height: 100%
+      width: 100%
+      position: relative
+      &:after
+        /* colors */
+        //background-color: rgba(#000 ,0.25)
+        opacity: 0
+        transition: 0.3s ease-in-out
+
+        /* sizes */
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        position: absolute
+        content: ''
+
+  &-category
+    /* position */
+    position: absolute
+    bottom: 0.75rem
+    left: 0.75rem
+  &-description
+    /* text */
+    font-size: 1rem
+  &-media
+    margin-top: auto
+    /* flex */
+    display: flex
+    align-items: center
+    &.flex-justify-center
+      justify-content: center
+  &-author
+    a
+      padding: 0.333rem
+  &-author-icon
+    padding-right: 0.333rem
+  /* post__item-small */
+  &-small
+    /* flex */
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    overflow: hidden
+    /* sizes */
+    border-radius: 0.333rem
+    /* colors */
+    &:not(:last-child)
+      margin-bottom: 1rem
+  &-small-content
+    padding: 0.5rem 1rem
+  &-small-img
+    /* sizes */
+    width: 7rem
+    height: 5rem
+    border-radius: 5px
+    flex-shrink: 0
+    /* hidden */
+    overflow: hidden
+    > a
+      /* sizes */
+      width: 100%
+      height: 100%
+    img
+      /* sizes */
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &-small-date
+    margin-top: 0.75rem
+  &-small-title
+    color: $black
+    a
+      &:hover
+        /* colors */
+        color: $color-primary-300
+

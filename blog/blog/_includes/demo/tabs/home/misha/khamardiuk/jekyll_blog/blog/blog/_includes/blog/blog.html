@@ -1,0 +1,13 @@
+<main class="page-content blog block-margin-top-md block-margin-bottom-lg">
+    <div class="container container-md">
+        <div class="blog__inner flex  grid grid-sidebar grid-gap-2">
+            <div class="flex">
+                {% for post in site.categories.linux limit:3 offset:0 %}
+                {% include posts/post__item-col-6.html %}
+                {% endfor %}
+            </div>
+            {% include std/sidebar.html %}
+        </div>
+
+    </div>
+</main>

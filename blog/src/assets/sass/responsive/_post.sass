@@ -1,0 +1,34 @@
+@media screen and (max-width: 480px)
+  .post
+    // post__item styles
+    &__item-content
+      padding: 0.8rem
+    &-img
+      max-height: 300px
+      min-height: auto
+      height: auto
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px
+    &-nav-prev
+      border-right: 0
+    &-nav
+      flex-wrap: wrap
+      .flex-col-6
+        max-width: 100%
+        flex: 0 0 100%
+      .flex-col-6 + .flex-col-6
+        margin-top: 1rem
+  .blog
+    .post__item-col-12
+      padding: 0 0 1rem 0
+      .post__item-content
+        padding: 1rem
+      .post__item-img
+        min-height: auto
+        max-height: 270px
+  .post
+@media screen and (max-width: 360px)
+  .blog
+    .post__item-col-12
+      padding: 0 0 1rem 0
+      .post__item-content
+        padding: 0.8rem

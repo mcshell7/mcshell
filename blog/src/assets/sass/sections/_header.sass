@@ -1,0 +1,84 @@
+@import "../std/vars"
+.header
+  border-bottom: 1px solid $color-secondary-50
+  /* sizes */
+  min-height: 3.333rem
+  /* colors */
+  background-color: $white
+  transition: 0.2s ease-in-out
+  color: $white-std
+  ~ main
+    padding-top: 51px
+  &-container
+    height: 50px
+  &.transparent
+    color: $white
+    .header__search-btn
+      color: $white
+  &:not(&.sticky)
+    //color: $white-std
+    color: $black
+    background-color: $white
+    .header__search-btn
+      color: $white-std
+  &.sticky
+    color: $black
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 10
+    width: 100%
+    transition: 0.5s ease-in-out
+    &:not(.transparent)
+      background-color: var(--color-header-bg)
+
+  &.transparent
+    &:not(.sticky)
+      background-color: transparent
+  &.fixed
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 10
+  .container
+    height: 100%
+  &__inner
+    /* sizes */
+    height: 100%
+    /* position */
+    position: relative
+    /* flex */
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__prepend
+    display: flex
+    justify-content: flex-start
+    align-items: center
+  &__prepend-item
+    /* sizes */
+    height: 100%
+    &:not(:last-child)
+      margin-right: 1rem
+  &__search
+    /* sizes */
+    height: 100%
+  &__search-btn
+    /* link */
+    cursor: pointer
+    /* sizes */
+    height: 100%
+    line-height: 1.4rem
+    padding: 1.1rem 1.6rem
+    /* color */
+    background-color: transparent
+    border: 0
+    color: $white
+    /* text */
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: 700
+    &:hover
+      transition: 0.3s ease-in-out
+      background-color: #222222

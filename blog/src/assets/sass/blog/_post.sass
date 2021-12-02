@@ -1,0 +1,91 @@
+.post
+  margin-bottom: 5rem
+  &-footer
+    margin: 1rem 0
+  &-img
+    overflow: hidden
+    max-height: 400px
+    width: 100%
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+  &-title
+    font-weight: 600
+    padding-right: .5em
+    padding-left: .5em
+    margin-bottom: 1rem
+  &-media-item
+    padding: 0.5rem 1.5rem
+    color: $color-secondary-300!important
+    a
+      color: $color-secondary-300!important
+
+    &:nth-child(1),&:nth-child(2)
+      border-right: 1px solid $color-secondary-100
+  &-nav
+    background-color: $white-std
+    padding: 2rem 0
+    //border-radius: 1rem
+    border-bottom: 1px solid $gray
+    //border: 1px solid $gray
+    border-top: 1px solid $gray
+
+  &-nav-title
+    font-size: 1.2rem
+  &-nav-next
+    .post-nav-title
+      padding-right: 75px
+    .post-nav-link
+      &:before
+        margin-left: 1rem
+        float: right
+        content: '\35'
+  &-nav-prev
+    border-right: 1px solid $gray
+    .post-nav-title
+      padding-left: 75px
+    .post-nav-link
+      &:before
+        margin-right: 1rem
+        float: left
+        content: '\34'
+  &-nav-link
+    display: block
+    &:hover
+      &:before
+        background-color: $color-secondary-200
+    &:before
+      font-family: $font-elegant-icons
+      font-size: 2rem
+      font-weight: 700
+      line-height: 1em
+      border-radius: 50%
+      padding: 1rem
+      background-color: $color-secondary-300
+      width: 2em
+      height: 2em
+      text-align: center
+      color: $white-std
+
+.content
+  p
+    margin-bottom: 0.8em
+  h1,h2,h3,h4,h5,h6 + p
+    margin-bottom: 2.5em
+  @for $i from 1 through 6
+    .heading-#{$i},h#{$i}
+      margin-bottom: 0.6em
+  @for $i from 1 through 3
+    .heading-#{$i},h#{$i}
+      font-weight: 600
+  @for $i from 4 through 6
+    .heading-#{$i},h#{$i}
+      font-weight: 400
+  h1,h2,h3,h4,h5,h6 + p
+    margin-top: 0.8em
+
+body.bc-embed-mode .bc-content
+    border-radius: 1rem!important
+    padding: 1rem!important
+    background-color: $color-secondary-50!important

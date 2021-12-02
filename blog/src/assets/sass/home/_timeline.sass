@@ -1,0 +1,51 @@
+.timeline
+  background-color: $white-std
+  &__list
+    position: relative
+    &:before
+      background-color: $color-dark-400
+      content: ""
+      height: calc(100% + 42px)
+      left: 0
+      margin: auto
+      position: absolute
+      right: 0
+      top: -52px
+      width: 2px
+  &__item
+    position: relative
+    &:before
+      border: 2px solid $color-dark-800
+      content: ""
+      position: absolute
+      top: 12px
+      width: 12px
+      height: 12px
+      z-index: 1
+      background-color: #f8f9fa
+      border-radius: 30px
+      right: calc(50% - 6px)
+  &__item-col
+    cursor: pointer
+    height: max-content
+    padding: 1rem 1.3rem
+    background-color: $white-std
+    border: 1px solid $color-dark-200
+    box-shadow: 0 10px 25px rgba(60, 72, 88, 0.04)
+    &:hover
+      .timeline__item-title
+        color: $color-primary-300
+  &__item-description
+    font-size: 0.93em
+  &__item-title
+    font-size: 1.35em
+  &__item-subtitle
+    margin-top: 0.3rem
+    font-size: 0.93em
+
+  &__star-icon
+    font-size: 1.5rem
+    border-radius: 50%
+    padding: 0.6rem
+    border: 2px solid $color-dark-400
+

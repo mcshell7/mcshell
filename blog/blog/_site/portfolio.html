@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+    <!--  All meta tags  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="mcshell" />
+    <meta name="copyright" lang="en" content="khamardiuk.com" />
+    <base href="/">
+    <title>khamardiuk.com - Веб дизайнер</title>
+    <meta name="description" content="Новости , статьи , портфолио и многое другое">
+    <meta property="og:image"  content="img/khamardiuk.jpg">
+
+    <!-- Links to css files  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../../../../assets/css/libs.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
+    <link rel="stylesheet" href="../../../../assets/css/style.min.css">
+</head>
+
+
+<body>
+<header class="header transparent fixed">
+    <div class="container container-lg">
+        <div class="header__inner">
+            <div class="header__append logo">
+                <a href="/">khamardiuk.com</a>
+            </div>
+            <div class="header__prepend">
+                <nav class="header__menu header__prepend-item">
+                    <ul class="header__menu-list">
+    <li class="header__menu-item"><a href="framework.html" class="header__menu-link">Framework</a></li>
+    <li class="header__menu-item"><a href="blog.html" class="header__menu-link">Blog</a></li>
+    <li class="header__menu-item"><a href="blog_detail.html" class="header__menu-link">Blog detail</a></li>
+    <li class="header__menu-item"><a href="portfolio.html" class="header__menu-link">Портфолио</a></li>
+</ul>
+                </nav>
+                <div class="header__search header__prepend-item">
+                    <div id="search-menu">
+                        <div class="wrapper">
+                            <form id="form" action="#" method="">
+                                <input id="popup-search" type="text" name="u" placeholder="Search for a user"/>
+                                <button id="popup-search-button" type="submit" name="search"><i class="ion-ios-search-strong"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <i class="header__search-btn ti-search" id="search-icon"></i>
+                </div>
+                <div class="dark__mode-btn header__prepend-item">
+                    <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
+                    <div class="outer-container dark-light js-mode-toggle js-mode-toggle-text">
+                        <div class="container-btn">
+                            <div class="circle">
+                                <div class="cloud"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="portfolio section-lg">
+    <div class="container container-md">
+        <div class="heading-3 text-center text-margin-bottom-xs">My Portfolio</div>
+        <p class="text-center text-max-width-700 text-color-dark-gray-700">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+        <div class="portfolio__inner block-margin-top-md">
+            <ul class="portfolio__nav flex flex-justify-center nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="text-margin-right-xs ">
+                    <a class="portfolio__nav-item button button-sm button-primary-outline active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-home" aria-selected="true">All</a>
+                </li>
+                <li class="text-margin-right-xs ">
+                    <a class="portfolio__nav-item button button-sm button-primary-outline" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Creative</a>
+                </li>
+                <li class="text-margin-right-xs">
+                    <a class="portfolio__nav-item button button-sm button-primary-outline" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Photography</a>
+                </li>
+                <li class="text-margin-right-xs">
+                    <a class="portfolio__nav-item button button-sm button-primary-outline" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Personal</a>
+                </li>
+            </ul>
+            <div class="portfolio__content block-margin-top-md tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                    <div  data-aos="fade-left"
+                          data-aos-duration="1000"
+                          class="portfolio__list flex">
+                        
+                    </div> <!-- end portfolio__list flex -->
+                </div>
+                <div  class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div
+                            class="portfolio__list flex">
+                        <div class="flex-col-4 text-padding-xs">
+                            <div class="portfolio__item hover-box-transform border-radius-md">
+                                <div class="portfolio__item-img">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="../../assets/img/home/coder.webp" type="image/webp">
+                                            <img src="../../assets/img/home/coder.jpg" alt="">
+                                        </picture>
+                                        <span class="portfolio__item-icon icon-camera"></span>
+                                    </a>
+                                </div>
+                                <div class="portfolio__item-content text-padding-md text-center">
+                                    <div class="heading-4 text-font-weight-bold">
+                                        <a href="#" class="text-color-primary-300 ">The Usefulness</a>
+                                    </div>
+                                    <div class="portfolio__item-category text-margin-top-xs">
+                                        <a href="#" class="text-underline">Photography</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end portfolio__item -->
+                        </div> <!-- end flex-col-4 -->
+                        <div class="flex-col-4 text-padding-xs">
+                            <div class="portfolio__item hover-box-transform border-radius-md">
+                                <div class="portfolio__item-img">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="../../assets/img/home/coder.webp" type="image/webp">
+                                            <img src="../../assets/img/home/coder.jpg" alt="">
+                                        </picture>
+                                        <span class="portfolio__item-icon icon-camera"></span>
+                                    </a>
+                                </div>
+                                <div class="portfolio__item-content text-padding-md text-center">
+                                    <div class="heading-4 text-font-weight-bold">
+                                        <a href="#" class="text-color-primary-300 ">The Usefulness</a>
+                                    </div>
+                                    <div class="portfolio__item-category text-margin-top-xs">
+                                        <a href="#" class="text-underline">Photography</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end portfolio__item -->
+                        </div> <!-- end flex-col-4 -->
+                        <div class="flex-col-4 text-padding-xs">
+                            <div class="portfolio__item hover-box-transform border-radius-md">
+                                <div class="portfolio__item-img">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="../../assets/img/home/coder.webp" type="image/webp">
+                                            <img src="../../assets/img/home/coder.jpg" alt="">
+                                        </picture>
+                                        <span class="portfolio__item-icon icon-camera"></span>
+                                    </a>
+                                </div>
+                                <div class="portfolio__item-content text-padding-md text-center">
+                                    <div class="heading-4 text-font-weight-bold">
+                                        <a href="#" class="text-color-primary-300 ">The Usefulness</a>
+                                    </div>
+                                    <div class="portfolio__item-category text-margin-top-xs">
+                                        <a href="#" class="text-underline">Photography</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end portfolio__item -->
+                        </div> <!-- end flex-col-4 -->
+                        <div class="flex-col-4 text-padding-xs">
+                            <div class="portfolio__item hover-box-transform border-radius-md">
+                                <div class="portfolio__item-img">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="../../assets/img/home/coder.webp" type="image/webp">
+                                            <img src="../../assets/img/home/coder.jpg" alt="">
+                                        </picture>
+                                        <span class="portfolio__item-icon icon-camera"></span>
+                                    </a>
+                                </div>
+                                <div class="portfolio__item-content text-padding-md text-center">
+                                    <div class="heading-4 text-font-weight-bold">
+                                        <a href="#" class="text-color-primary-300 ">The Usefulness</a>
+                                    </div>
+                                    <div class="portfolio__item-category text-margin-top-xs">
+                                        <a href="#" class="text-underline">Photography</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end portfolio__item -->
+                        </div> <!-- end flex-col-4 -->
+                        <div class="flex-col-4 text-padding-xs">
+                            <div class="portfolio__item hover-box-transform border-radius-md">
+                                <div class="portfolio__item-img">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="../../assets/img/home/coder.webp" type="image/webp">
+                                            <img src="../../assets/img/home/coder.jpg" alt="">
+                                        </picture>
+                                        <span class="portfolio__item-icon icon-camera"></span>
+                                    </a>
+                                </div>
+                                <div class="portfolio__item-content text-padding-md text-center">
+                                    <div class="heading-4 text-font-weight-bold">
+                                        <a href="#" class="text-color-primary-300 ">The Usefulness</a>
+                                    </div>
+                                    <div class="portfolio__item-category text-margin-top-xs">
+                                        <a href="#" class="text-underline">Photography</a>
+                                    </div>
+                                </div>
+                            </div> <!-- end portfolio__item -->
+                        </div> <!-- end flex-col-4 -->
+                    </div> <!-- end portfolio__list flex -->
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">2</div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">3</div>
+            </div>
+        </div>
+    </div>
+</section> <!-- end section portfolio -->
+
+<footer class="footer">
+    <div class="container container-md">
+        <div class="footer__inner">
+            <div class="footer__item">
+                <nav class="footer__menu">
+                    <div class="footer__menu-title title title-xs">Меню</div>
+
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Блог</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Контакты</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Об авторе</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Портфолио</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__item">
+                <nav class="footer__menu">
+                    <div class="footer__menu-title title title-xs">Соцсети</div>
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Telegram</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Vkontakte</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Instagram</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__item"></div>
+        </div>
+    </div>
+</footer>
+
+<script src="../../../../assets/js/app.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</body>
+</html>

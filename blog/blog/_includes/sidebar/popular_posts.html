@@ -1,0 +1,6 @@
+<div class="sidebar__item-title heading-5 text-font-weight-bold">Последние записи</div>
+<div class="post__list-small">
+    {% for post in site.categories.linux limit:5 offset:0 %}
+    {% include posts/post__item-small.html %}
+    {% endfor %}
+</div>

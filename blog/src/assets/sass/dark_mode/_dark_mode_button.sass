@@ -1,0 +1,120 @@
+
+
+/* outer-container-btn styles
+
+.outer-container
+  background-color: transparent
+  font-size: 8px
+  height: 50px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: .5s
+
+  &.light
+    background-color: transparent
+
+/* container-btn "the whole button" styles
+
+.container-btn
+  background: #484848
+  width: 8em
+  height: 3em
+  border-radius: 50px
+  display: flex
+  align-items: center
+  padding: 0.3em 0.5em
+  cursor: pointer
+
+.light .container-btn
+  background: #25aee9
+
+/* sun and moon styles
+
+.circle
+  position: relative
+  height: 100%
+  width: 35%
+  background: #fffdf2
+  border-radius: 50%
+  transition: all 0.3s
+  border: 0.5em solid #dee1c5
+  box-shadow: 2em 0em 0 -1em #e9e0d1a8, 3em 0.8em 0 -1em #e9e0d1a8, 3em 0em 0 -1.1em #e9e0d1a8, 2.5em -1em 0 -1.1em #e9e0d1a8, 4em 0 0 -1em #e9e0d1a8, 4.5em 1em 0 -1.1em #e9e0d1a8, 5em -0.8em 0em -1.1em #e9e0d1a8, 5.5em 0.5em 0 -1em #e9e0d1a8, inset 8em -2.5em 0.7em -3.5em rgba(104, 58, 15, 0.144), inset 0em 0em 0 -3em rgba(104, 58, 15, 0.041)
+
+  &::before, &::after
+    content: ""
+    position: absolute
+    background: rgba(104, 58, 15, 0.144)
+    border-radius: 50%
+
+  &::before
+    top: 65%
+    left: 60%
+    height: 0.5em
+    width: 0.5em
+    border: 0.1em solid rgba(104, 58, 15, 0.041)
+
+  &::after
+    top: 10%
+    left: -30%
+    height: 1em
+    width: 1em
+    border: 0.3em solid rgba(104, 58, 15, 0.041)
+
+.light
+  .circle
+    background: #fbca00
+    transform: translateX(190%)
+    box-shadow: none
+    border: 0.2em solid #e4c74d
+
+    &::after, &::before
+      display: none
+
+  .cloud
+    position: absolute
+    top: 31%
+    left: -4.5em
+    display: block
+    width: 8em
+    height: 2em
+    border: 0.4em solid #d4d4d2
+    border-radius: 3em
+    background-color: #fff
+    animation: scaleItUp 0.5s
+    z-index: -2
+    transform: scale(0.35)
+    pointer-events: none
+
+    &::before, &::after
+      content: ""
+      display: block
+      position: relative
+      border: 0.4em solid #d4d4d2
+      border-radius: 100%
+      border-right-color: transparent
+      border-bottom-color: transparent
+      background-color: #fff
+
+    &::before
+      top: -2.3em
+      right: 0em
+      width: 4em
+      height: 3.5em
+      transform: rotateZ(20deg)
+
+    &::after
+      top: -6.7em
+      right: -3em
+      width: 3em
+      height: 5em
+      transform: rotateZ(83deg)
+      z-index: -1
+
+/* the clouds styles
+
+/* animations
+@keyframes scaleItUp
+  from
+    transform: scale(0)
