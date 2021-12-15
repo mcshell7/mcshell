@@ -5,7 +5,7 @@ const gulp = require("gulp");
 const cssbeautify = require("gulp-cssbeautify");
 const removeComments = require('gulp-strip-css-comments');
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const cssnano = require("gulp-cssnano");
 const rigger = require("gulp-include");
 const uglify = require("gulp-uglify");
@@ -287,4 +287,3 @@ exports.rsyncto = rsyncto;
 
 // for jekyll
 exports.productions = productions;
-
