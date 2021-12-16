@@ -27,7 +27,7 @@ var path = {
     build: {
         html: "../blog/blog/",
         js: "../blog/blog/assets/js/",
-        css: "../blog/blog/assets/css/",
+        css: "../blog/blog/_site/assets/css/",
         csslibs: "../blog/blog/assets/css/",
         images: "../blog/blog/assets/img/",
         fonts: "../blog/blog/assets/fonts/"

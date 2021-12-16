@@ -62,18 +62,18 @@
     max-width: 686px
   &-l
     max-width: 1044px
-
-h1
-
-h2
-h3
-h4
-h5
-p
-a
-blockquote
-i
-b
+//
+// h1
+//
+// h2
+// h3
+// h4
+// h5
+// p
+// a
+// blockquote
+// i
+// b
 
 
 
@@ -211,7 +211,7 @@ b
       color: inherit
       display: inline-block
     .button-text
-     padding-left: $icon-size/1.5
+     padding-left: calc($icon-size / 1.5)
   &-icon-right
     position: relative
     padding-right: $icon-size*2
@@ -223,7 +223,7 @@ b
       color: inherit
       display: inline-block
     .button-text
-      padding-right: $icon-size/1.5
+      padding-right: calc($icon-size / 1.5)
   /* special */
   &-ghost
     color: $color-secondary-900
@@ -938,4 +938,3 @@ input:not([type="submit"]):active + .list-input-requirements
         color: $color-dark-500
   li+li
     margin-top: 0.6em
-
