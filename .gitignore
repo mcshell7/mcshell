@@ -113,3 +113,4 @@ blog/node_modules
 
 /blog/blog/.jekyll-cache
 /blog/blog/_site
+/blog/blog/site
