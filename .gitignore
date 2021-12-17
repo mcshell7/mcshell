@@ -110,3 +110,6 @@ blog/node_modules
 
 /.DS_Store
 /package-lock.json
+
+/blog/blog/.jekyll-cache
+/blog/blog/_site
