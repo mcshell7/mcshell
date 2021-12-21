@@ -31,7 +31,7 @@ exclude: ['node_modules','gulpfile.js','package.json','package-lock.json','npm-d
 
   # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 #plugins:
 #  - jekyll-feed
 
