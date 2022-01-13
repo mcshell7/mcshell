@@ -22,12 +22,13 @@ const minify = require('gulp-minify');
 const sourcemaps = require('gulp-sourcemaps');
 const uglifyes = require('gulp-uglify-es').default;
 const rsync = require('gulp-rsync')
+const kwesforms = require('kwesforms');
 /* Paths */
 var path = {
     build: {
         html: "../blog/blog/",
         js: "../blog/blog/assets/js/",
-        css: "../blog/blog/_site/assets/css/",
+        css: "../blog/blog/assets/css/",
         csslibs: "../blog/blog/assets/css/",
         images: "../blog/blog/assets/img/",
         fonts: "../blog/blog/assets/fonts/"
@@ -68,9 +69,9 @@ function browserSyncReload() {
 
 function deploy(){
     let conn = ftp.create({
-        host:      '31.131.26.120',
-        user:      'mcshell',
-        password:  'yCs@qBV4QTF^k',
+        host:      '136.243.14.123',
+        user:      'misha524_mcshell_dev',
+        password:  'Umu2Kbz9jM82sRH',
         parallel:  21,
         maxConnections: 1,
         log: gutil.log
@@ -79,11 +80,11 @@ function deploy(){
         '../blog/blog/**/*',
     ];
     return gulp.src(globs, {buffer: true})
-        .pipe(conn.newer('/var/www/blog'))
-        .pipe(conn.dest('/var/www/blog'));
+        .pipe(conn.newer('/mcshell.net/blog'))
+        .pipe(conn.dest('/mcshell.net/blog'));
 }
 function rsyncto(){
-    return gulp.src('../blog/blog/**')
+    return gulp.src('../blog/blog/*')
         .pipe(rsync({
             root: '/',
             hostname: 'mcshell@31.131.26.120',
@@ -114,12 +115,11 @@ function htacces() {
         .pipe(browsersync.reload({ stream: true }));
 }
 function css() {
-    return src(path.src.css, { base: "src/assets/sass/" })
+    return src(path.src.css, { base: "./src/assets/sass/" })
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass())
         .pipe(cssbeautify())
-        .pipe(sourcemaps.write())
         .pipe(dest(path.build.css))
         .pipe(cssnano({
             zindex: false,
@@ -135,7 +135,6 @@ function css() {
         .pipe(sourcemaps.write())
         .pipe(dest(path.build.css))
         .pipe(browsersync.reload({ stream: true }));
-
 }
 function csslibs() {
     return src(path.src.csslibs)
@@ -237,7 +236,8 @@ function cleanProduction() {
         [
             '_layouts/',
             '_includes/',
-            'assets',
+            'assets/**',
+            'assets/css',
             'assets/js',
             '*.html',
             '*.htaccess',
@@ -253,16 +253,15 @@ function cleanProduction() {
 function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.csslibs], csslibs);
     gulp.watch([path.watch.fonts], fonts);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.images], images);
-    gulp.watch(['src'], htacces);
+    // gulp.watch(['src'], htacces);
     gulp.watch(['src/pages/_layouts/**/*.html'], productionLayout);
     gulp.watch(['src/pages/_includes/**/*.html'], productionIncludes);
 }
-const productions = gulp.series(cleanProduction,productionLayout,productionIncludes);
-const build = gulp.series(cleanProduction, gulp.parallel(browserSyncReload, htacces, html, productions, css, js, images, csslibs, fonts));
+const productions = gulp.series(productionLayout,productionIncludes);
+const build = gulp.series(cleanProduction, gulp.parallel(browserSyncReload, htacces, html, productions, css, js, images, fonts));
 
 const watch = gulp.parallel(build, browserSyncReload, watchFiles, browserSync);
 
@@ -273,12 +272,10 @@ const watch = gulp.parallel(build, browserSyncReload, watchFiles, browserSync);
 /* Exports Tasks */
 exports.html = html;
 exports.css = css;
-exports.csslibs = csslibs;
 exports.fonts = fonts;
 exports.js = js;
 exports.htacces = htacces;
 exports.images = images;
-// exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

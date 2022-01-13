@@ -1,0 +1,39 @@
+@media screen and (max-width: 768px)
+    .block
+      &-margin-top-lg
+        margin-top: 3rem
+@media screen and (max-width: 640px)
+  .grid
+    &-col-3
+      grid-template-columns: repeat(2,1fr)
+    &-gap-2
+      grid-gap: 1rem
+  .section
+    &-lg
+      padding: 3rem 0
+      .form-md
+        padding-bottom: 0
+        margin-bottom: 0
+  .block
+    &-margin-top-lg
+      margin-top: 2rem
+
+@media screen and (max-width: 540px)
+  .form
+    &-md
+      max-width: 80%
+      padding: 2rem 0 0 0
+      margin: 0
+      .form-body
+        grid-template-columns: auto
+      .form-item
+       &:nth-child(3n)
+         grid-column: 1
+@media screen and (max-width: 420px)
+  .form
+    &-md
+      max-width: 100%
+  .text
+    &-margin-bottom-sm
+      margin-bottom: .7rem
+@media screen and (max-width: 380px)

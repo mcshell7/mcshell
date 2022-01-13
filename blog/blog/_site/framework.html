@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="assets/css/libs.min.css">
     <link rel="stylesheet" href="https://unpkg.com/octomments/build/ocs-ui.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
 <body>
-<header class="header transparent fixed">
+<header class="header fixed">
     <div class="container container-lg">
         <div class="header__inner">
             <div class="header__append logo">
@@ -35,17 +35,6 @@
 </ul>
 
                 </nav>
-                <div class="header__search header__prepend-item">
-                    <div id="search-menu">
-                        <div class="wrapper">
-                            <form id="form" action="#" method="">
-                                <input id="popup-search" type="text" name="u" placeholder="Search for a user"/>
-                                <button id="popup-search-button" type="submit" name="search"><i class="ion-ios-search-strong"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <i class="header__search-btn ti-search" id="search-icon"></i>
-                </div>
                 <div class="dark__mode-btn header__prepend-item">
                     <div role="status" class="[ visually-hidden ][ js-mode-status ]"></div>
                     <div class="outer-container dark-light js-mode-toggle js-mode-toggle-text">
@@ -60,6 +49,7 @@
         </div>
     </div>
 </header>
+
 
 <main class="page-content home-content-page main site-content-area block-margin-bottom-lg">
     <section class="first__screen">
@@ -76,7 +66,7 @@
     <div id="particles-js" class="particles"></div>
 </section> <!-- end first__screen -->
 
-    <section class="contact section-lg bg-color-dark-gray-50">
+    <section class="contact section-lg section-bg">
     <div class="container container-md">
         <h3 class="text-center">Contact Form</h3>
         <div class="contact__inner flex flex-justify-center block-margin-top-lg">
@@ -85,7 +75,7 @@
                     <span class="icon_phone"></span>
                 </div>
                 <div class="contact__item-title heading-4 text-margin-bottom-sm ">Phone</div>
-                <div class="contact__item-description text-margin-bottom-md text-color-dark-gray-700">Promising development turmoil inclusive education transformative community</div>
+                <div class="contact__item-description text-margin-bottom-md text-color-secondary-for-mode">Promising development turmoil inclusive education transformative community</div>
                 <div class="contact__item-link">
                     <a href="tel: +38000000000 " class="text-color-primary-300 heading-5">+38 068 884 994</a>
                 </div>
@@ -95,7 +85,7 @@
                     <span class="icon_mail_alt"></span>
                 </div>
                 <div class="contact__item-title heading-4 text-margin-bottom-sm ">Email</div>
-                <div class="contact__item-description text-margin-bottom-md text-color-dark-gray-700">Promising development turmoil inclusive education transformative community</div>
+                <div class="contact__item-description text-margin-bottom-md text-color-secondary-for-mode">Promising development turmoil inclusive education transformative community</div>
                 <div class="contact__item-link">
                     <a href="mailto: example@mail.com" class="text-color-primary-300 heading-5">example@mail.com</a>
                 </div>
@@ -105,17 +95,17 @@
                     <span class="icon_pin_alt"></span>
                 </div>
                 <div class="contact__item-title heading-4 text-margin-bottom-sm ">Location</div>
-                <div class="contact__item-description text-margin-bottom-md text-color-dark-gray-700">Promising development turmoil inclusive education transformative community</div>
+                <div class="contact__item-description text-margin-bottom-md text-color-secondary-for-mode">Promising development turmoil inclusive education transformative community</div>
                 <div class="contact__item-link">
                     <a href="#" class="text-color-primary-300 heading-5">View on Google map</a>
                 </div>
             </div> <!-- end contact__item -->
         </div>
         <div class="flex flex-justify-center">
-            <form class="form form-md" id="form-4">
+            <form action="" method="POST" class="form form-md" id="form-4">
                 <div class="form-body">
                     <label class="form-item" for="form-item-type-email-4">
-                        <input class="form-input" type="email" id="form-item-type-email-4" placeholder="test@test.com">
+                        <input class="form-input" type="email" placeholder="test@test.com" name="userName" id="userName form-item-type-email-4" required>
                         <span class="form-error-message"></span>
                         <svg class="form-svg-icon form-icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -125,7 +115,7 @@
                         </svg>
                     </label>
                     <label class="form-item" for="form-item-type-name-4">
-                        <input class="form-input" type="text" id="form-item-type-name-4" placeholder="Your name">
+                        <input class="form-input" type="text" name="Name" id="form-item-type-name-4" placeholder="Your name" rules="required|max:255">
                         <span class="form-error-message"></span>
                         <svg class="form-svg-icon form-icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -135,7 +125,7 @@
                         </svg>
                     </label>
                     <label class="form-item" for="form-item-type-textarea-4">
-                        <textarea class="form-input" id="form-item-type-textarea-4" placeholder="Message"></textarea>
+                        <textarea class="form-input" type="textarea" name="message" id="form-item-type-textarea-4" placeholder="Message"></textarea>
                         <span class="form-error-message"></span>
                         <svg class="form-svg-icon form-icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -146,7 +136,7 @@
                     </label>
                     <label class="form-item" for="form-item-type-phone-4">
                         <span class="form-error-message"></span>
-                        <input class="form-input" type="password" id="form-item-type-phone-4" placeholder="password">
+                        <input class="form-input" type="password" name="password" id="form-item-type-phone-4" placeholder="password">
                         <svg class="form-svg-icon form-icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
@@ -162,10 +152,11 @@
         </div> <!-- row -->
     </div><!-- container -->
 </section> <!-- end section contact-me  -->
+
     <section class="section-lg benefits">
     <div class="container container-md">
         <h3 class="heading-3 text-center text-margin-bottom-xs">What Do I Offer ?</h3>
-        <p class="text-center text-max-width-700 text-color-dark-gray-700">
+        <p class="text-center text-max-width-700">
             Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.
         </p>
         <div class="benefits__list grid grid-col-3 grid-gap-2 block-margin-top-md text-center">
@@ -174,35 +165,35 @@
                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 30,2L 2,2 C 0.896,2,0,2.896,0,4l0,18 c0,1.104, 0.896,2, 2,2l 9.998,0 c-0.004,1.446-0.062,3.324-0.61,4L 10.984,28 C 10.44,28, 10,28.448, 10,29C 10,29.552, 10.44,30, 10.984,30l 10.030,0 C 21.56,30, 22,29.552, 22,29c0-0.552-0.44-1-0.984-1l-0.404,0 c-0.55-0.676-0.606-2.554-0.61-4L 30,24 c 1.104,0, 2-0.896, 2-2L 32,4 C 32,2.896, 31.104,2, 30,2z M 14,24l-0.002,0.004 C 13.998,24.002, 13.998,24.002, 14,24L 14,24z M 18.002,24.004L 18,24l 0.002,0 C 18.002,24.002, 18.002,24.002, 18.002,24.004z M 30,20L 2,20 L 2,4 l 28,0 L 30,20 z"/></g></svg>
                 </div>
                 <div class="benefits__item-title heading-5 text-margin-bottom-sm">UX / UI Design</div>
-                <div class="benefits__item-description text-color-dark-gray-700">It is a long established fact that a reader will be distracted by the when looking at its layout.</div>
+                <p class="benefits__item-description">It is a long established fact that a reader will be distracted by the when looking at its layout.</p>
             </div>
             <div class="benefits__item hover-box-transform border-radius-md">
                 <div class="benefits__item-icon text-margin-bottom-md">
                     <svg width="32.784000396728516" height="32" viewBox="0 0 32.784000396728516 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 17.066,2.134c-3.822,0-7.644,1.458-10.56,4.374c-5.832,5.832-5.832,15.288,0,21.118 C 9.424,30.542, 13.244,32, 17.066,32s 7.644-1.458, 10.56-4.374c 5.832-5.832, 5.832-15.288,0-21.118C 24.71,3.592, 20.888,2.134, 17.066,2.134z M 26.212,26.212C 23.77,28.654, 20.522,30, 17.066,30c-3.454,0-6.702-1.346-9.146-3.788c-2.442-2.442-3.788-5.69-3.788-9.146 s 1.346-6.702, 3.788-9.146c 2.442-2.442, 5.69-3.788, 9.146-3.788c 3.454,0, 6.702,1.346, 9.146,3.788S 30,13.612, 30,17.066 S 28.654,23.77, 26.212,26.212zM 23,16L 18,16 L 18,8.986 c0-0.552-0.448-1-1-1S 16,8.434, 16,8.986l0,8.008 c0,0,0,0.002,0,0.002L 16,17 C 16,17.552, 16.448,18, 17,18l 6,0 C 23.552,18, 24,17.552, 24,17C 24,16.448, 23.552,16, 23,16z"/></g></svg>
                 </div>
                 <div class="benefits__item-title heading-5 text-margin-bottom-sm">24 / 7</div>
-                <div class="benefits__item-description text-color-dark-gray-700">It is a long established fact that a reader will be distracted by the when looking at its layout.</div>
+                <p class="benefits__item-description">It is a long established fact that a reader will be distracted by the when looking at its layout.</p>
             </div>
             <div class="benefits__item hover-box-transform border-radius-md">
                 <div class="benefits__item-icon text-margin-bottom-md">
                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 30,10l-4,0 c0,0-1.156,0-2-2c-0.43-1.018-0.896-2-2-2L 14,6 C 12.896,6, 12.416,6.976, 12,8C 11.188,10, 10,10, 10,10L 8,10 c0-1.104-0.896-2-2-2L 4,8 C 2.896,8, 2,8.896, 2,10C 0.896,10,0,10.896,0,12l0,16 c0,1.104, 0.896,2, 2,2l 28,0 c 1.104,0, 2-0.896, 2-2L 32,19.75 L 32,18 L 32,12 C 32,10.896, 31.104,10, 30,10z M 30,28L 2,28 l0-8 l 9.1,0 c 0.49,3.388, 3.376,6, 6.9,6c 3.61,0, 6.546-2.742, 6.924-6.25L 30,19.75 L 30,28 z M 13,19 C 13,16.242, 15.244,14, 18,14s 5,2.242, 5,5c0,2.756-2.244,5-5,5S 13,21.756, 13,19z M 24.9,18C 24.41,14.612, 21.524,12, 18,12 S 11.59,14.612, 11.1,18L 2,18 L 2,12 l 2,0 l 2,0 l 4,0 c 1.168,0, 2.88-0.85, 3.852-3.248C 14.018,8.346, 14.13,8.122, 14.204,8l 7.584,0 c 0.134,0.22, 0.306,0.626, 0.37,0.778C 23.452,11.844, 25.586,12, 26,12l 4,0 l0,6 L 24.9,18 zM 4,15.020A1,1 1080 1 0 6,15.020A1,1 1080 1 0 4,15.020z"/></g></svg>
                 </div>
                 <div class="benefits__item-title heading-5 text-margin-bottom-sm">Photography</div>
-                <div class="benefits__item-description text-color-dark-gray-700">It is a long established fact that a reader will be distracted by the when looking at its layout.</div>
+                <p class="benefits__item-description">It is a long established fact that a reader will be distracted by the when looking at its layout.</p>
             </div>
             <div class="benefits__item hover-box-transform border-radius-md">
                 <div class="benefits__item-icon text-margin-bottom-md">
                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 16,0C 10.478,0, 6,4.546, 6,10.154L 6,12 L 4,12 C 2.896,12, 2,12.896, 2,14l0,16 c0,1.104, 0.896,2, 2,2l 24,0 c 1.104,0, 2-0.896, 2-2L 30,14 c0-1.104-0.896-2-2-2l-2,0 L 26,10.154 C 26,4.546, 21.522,0, 16,0z M 8,10.154C 8,5.658, 11.588,2, 16,2s 8,3.658, 8,8.154L 24,12 L 8,12 L 8,10.154 z M 28,30L 4,30 L 4,14 l 24,0 L 28,30 z M 20,22c0-2.21-1.79-4-4-4s-4,1.79-4,4s 1.79,4, 4,4S 20,24.21, 20,22z M 16,24c-1.102,0-2-0.898-2-2 s 0.898-2, 2-2s 2,0.898, 2,2S 17.102,24, 16,24z"/></g></svg>
                 </div>
-                <div class="benefits__item-title text-margin-bottom-sm">Web Security</div>
-                <div class="benefits__item-description text-color-dark-gray-700">It is a long established fact that a reader will be distracted by the when looking at its layout.</div>
+                <div class="benefits__item-title heading-5 text-margin-bottom-sm">Web Security</div>
+                <p class="benefits__item-description">It is a long established fact that a reader will be distracted by the when looking at its layout.</p>
             </div>
             <div class="benefits__item hover-box-transform border-radius-md">
                 <div class="benefits__item-icon text-margin-bottom-md">
                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 30,6l-2,0 L 28,2 c0-1.104-0.896-2-2-2L 2,0 C 0.896,0,0,0.896,0,2l0,22 c0,1.104, 0.896,2, 2,2l 2,0 l0,4 c0,1.104, 0.896,2, 2,2l 24,0 c 1.104,0, 2-0.896, 2-2L 32,8 C 32,6.896, 31.104,6, 30,6z M 2,24L 2,2 l 24,0 l0,22 L 2,24 z M 30,30L 6,30 l0-4 l 2,0 l0,2 l 2,0 l 16,0 l 2,0 l0-2 l0-2 L 28,18 L 28,8 l 2,0 L 30,30 zM 14.79,8.188A2.782,2.782 1080 1 0 20.354,8.188A2.782,2.782 1080 1 0 14.79,8.188zM 10,10L 4,14L 4,18L 4,20L 4,22L 6,22L 22,22L 24,22L 24,20L 24,18L 24,12L 16,16 z"/></g></svg>
                 </div>
                 <div class="benefits__item-title heading-5 text-margin-bottom-sm">Graphic Designer</div>
-                <div class="benefits__item-description text-color-dark-gray-700">It is a long established fact that a reader will be distracted by the when looking at its layout.</div>
+                <p class="benefits__item-description">It is a long established fact that a reader will be distracted by the when looking at its layout.</p>
             </div>
 
             <div class="benefits__item hover-box-transform border-radius-md">
@@ -210,16 +201,16 @@
                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g><path d="M 27.526,12.682c-0.252-0.876-0.594-1.71-1.028-2.492l 1.988-4.182c-0.738-0.92-1.574-1.756-2.494-2.494 l-4.182,1.988c-0.78-0.432-1.616-0.776-2.492-1.028L 17.762,0.102C 17.184,0.038, 16.596,0, 16,0S 14.816,0.038, 14.238,0.102L 12.682,4.474 C 11.808,4.726, 10.972,5.070, 10.192,5.502L 6.008,3.514c-0.92,0.738-1.756,1.574-2.494,2.494l 1.988,4.182 c-0.432,0.78-0.776,1.616-1.028,2.492L 0.102,14.238C 0.038,14.816,0,15.404,0,16s 0.038,1.184, 0.102,1.762l 4.374,1.556 c 0.252,0.876, 0.594,1.71, 1.028,2.492l-1.988,4.182c 0.738,0.92, 1.574,1.758, 2.494,2.494l 4.182-1.988 c 0.78,0.432, 1.616,0.776, 2.492,1.028l 1.556,4.374C 14.816,31.962, 15.404,32, 16,32s 1.184-0.038, 1.762-0.102l 1.556-4.374 c 0.876-0.252, 1.71-0.594, 2.492-1.028l 4.182,1.988c 0.92-0.738, 1.758-1.574, 2.494-2.494l-1.988-4.182 c 0.432-0.78, 0.776-1.616, 1.028-2.492l 4.374-1.556C 31.962,17.184, 32,16.596, 32,16s-0.038-1.184-0.102-1.762L 27.526,12.682z M 16,24 c-4.418,0-8-3.582-8-8c0-4.418, 3.582-8, 8-8s 8,3.582, 8,8C 24,20.418, 20.418,24, 16,24zM 12,16A4,4 1080 1 0 20,16A4,4 1080 1 0 12,16z"/></g></svg>
                 </div>
                 <div class="benefits__item-title heading-5 text-margin-bottom-sm">Ios App Designer</div>
-                <div class="benefits__item-description text-color-dark-gray-700">It is a long established fact that a reader will be distracted by the when looking at its layout.</div>
+                <p class="benefits__item-description">It is a long established fact that a reader will be distracted by the when looking at its layout.</p>
             </div>
         </div> <!-- benefits__list -->
     </div> <!-- container -->
 </section> <!-- end section benefits -->
 
-    <section class="section-lg timeline bg-color-dark-gray-50">
+    <section class="section-lg timeline section-bg">
     <div class="container container-md">
         <h3 class="heading-3 text-center text-margin-bottom-xs">What Do I Offer ?</h3>
-        <p class="text-center text-max-width-700 text-color-dark-gray-700">
+        <p class="text-center text-max-width-700">
             Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.
         </p>
         <div class="timeline__star block-margin-top-lg text-center">
@@ -278,14 +269,15 @@
         </div> <!-- timeline__list -->
     </div> <!-- container -->
 </section> <!-- end section timeline -->
-    <section class="skills" >
+
+    <section class="skills">
     <div class="skills__inner flex">
         <div class="skills__img flex-col-4">
             <img src="../../assets/img/home/coder.jpg" alt="">
         </div>
         <div class="skills__content flex-col-8">
             <div class="heading-3 text-center text-margin-bottom-xs">Work Expertise</div>
-            <p class="text-center text-max-width-700 text-color-dark-gray-700">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+            <p class="text-center text-max-width-700 text-color-secondary-for-mode">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
             <div class="skills__content-inner flex block-margin-top-lg">
 
                 <div class="skills__nav flex-col flex-col-3">
@@ -390,10 +382,11 @@
 
     </div> <!-- skills__inner -->
 </section> <!-- end section skills  -->
-    <section class="news section-lg bg-color-dark-gray-50">
+
+    <section class="news section-lg section-bg">
     <div class="container container-md">
         <div class="heading-3 text-center text-margin-bottom-xs">Work Expertise</div>
-        <p class="text-center text-max-width-700 text-color-dark-gray-700">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+        <p class="text-center text-max-width-700 text-color-secondary-for-mode">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
         <div class="flex block-margin-top-lg">
             
             <div class="flex-col flex-col-4"><article class="hover-box-transform post__item">
@@ -418,17 +411,9 @@
         <div class="post__item-title title heading-4 text-center text-margin-bottom-xs">
             <a class="hover-color-primary-300" href="/categories/linux/2021-01-01-duet-design-system-html-frejmvork.html">Duet Design System</a>
         </div>
-        <div class="post__item-description text-margin-bottom-xs text-center">
-            <h3 id="duet-design-system---html-фреймворк">Duet Design System - HTML фреймворк</h3>
-
-<p><strong>Duet Design System</strong> - это набор компонентов и инструментов многократного использования, основанных на четких стандартах.</p>
-
-<p>Duet разделен на шесть интерфейсных пакетов и <em>Sketch</em> <em>Toolkit,</em> которые используют дизайнеры. Эти инструменты можно использовать вместе или по отдельности в зависимости от потребностей вашей команды.</p>
-
-<p><a href="https://www.duetds.com/">Официальный сайт</a></p>
-
-
-        </div>
+        <p class="post__item-description text-margin-bottom-xs text-center">
+            это набор компонентов и инструментов многократного использования, основанных на четких стандартах.
+        </p>
         <div class="post__item-media flex-justify-start">
             <div class="post__item-author">
                 <a class="post__item-author-link author-mc text-color-primary-300" href=" /categories/linux/2021-01-01-duet-design-system-html-frejmvork.html"><span class="post__item-author-icon icon-user"></span><span> mcshell</span></a>
@@ -446,6 +431,7 @@
         </div>
     </div>
 </article> <!-- end post__item --></div><!-- end  flex-col-->
+
             
             <div class="flex-col flex-col-4"><article class="hover-box-transform post__item">
     <div class="post__item-img">
@@ -469,43 +455,9 @@
         <div class="post__item-title title heading-4 text-center text-margin-bottom-xs">
             <a class="hover-color-primary-300" href="/categories/linux/2020-12-16-kak-sdelat-iz-gnome-3-podobii-macos-na-ubuntu-20-04.html">Заголовок статьи</a>
         </div>
-        <div class="post__item-description text-margin-bottom-xs text-center">
-            <h3>1. Visual Studio Code</h3>
-
-<p>Visual Studio Code (также известный как VS Code) — это текстовый редактор или IDE, и это очень известный инструмент.
-Почему он так популярен?</p>
-
-<p>Он популярен, потому что доступен для всех основных операционных систем, таких как Windows, Mac и Linux. Также он имеет широкий набор расширений. Например, он уже имеет встроенное расширение для работы с Node.JS, а также расширения для других языков, таких как C Sharp, PHP и Java.</p>
-<h3>Особенности VS Code</h3>
-<h4>Встроенный Intellisense</h4>
-
-<p>VS Code имеет встроенный IntelliSense, а это означает, что при вводе ключевого слова он автоматически завершает и выделяет ключевые слова, а также другие переменные и типы данных.</p>
-<h4>Отладчик</h4>
-
-<p>VS Code также имеет встроенный отладчик, который можно подключить к запущенному или созданному приложению, и после этого у вас будет возможность установить точки прерывания для тестирования приложения, а затем отладить его и исправить. </p>
-<h4>Расширения</h4>
-
-<p>VS Code имеет полноценный маркетплейс с различными расширениями, которые можно установить.</p>
-<h4>Встроенное соединение Git</h4>
-
-<p>Если вы используете GitHub или любой другой Git- клиент, вы сможете напрямую подключиться к VS Code, и все готово. Вы сможете выполнять коммиты, а также пуши файлов прямо из VS Code в свой репозиторий.</p>
-<h4>Похожие инструменты</h4>
-
-<p>Есть несколько инструментов, похожих на VS Code, включая Atom, Sublime Text и Notepad ++. Вы также можете изучить эти инструменты более подробно.</p>
-<h3>2. React</h3>
-
-<p>React — это JavaScript-фреймворк, который в 2020 году набирает популярность в мире frontend-разработки. Он был создан Facebook, и как только был представлен, обрел популярность за весьма короткий период времени.</p>
-<h4>Почему он популярен?</h4>
-
-<p>Одна из причин популярности React — это React Native, платформа для создания мобильных приложений. Она сочетает в себе возможности React с нативными вычислительными возможностями. Благодаря этому, вы сможете создать приложение для Android, iOS и веб с помощью React Native.</p>
-
-<p>Еще одна причина популярности React — виртуальный DOM, который действует как односторонняя привязка. Допустим, вы разместили веб-сайт в Интернете. Теперь вы пытаетесь внести на сайт некоторые изменения. После того, как вы внесете изменения, весь веб-сайт будет повторно отображен, и вы получите новую и старую версию веб-сайта. Теперь обе эти версии сравниваются, и на самом веб-сайте отображаются только внесенные изменения, что сокращает время загрузки, поскольку иногда при использовании других JavaScript- фреймворков будет отображаться весь веб-сайт.
-Если это произойдет, впустую будет потрачено много времени, и много памяти, а React экономит эти ресурсы. Вот почему он так популярен.</p>
-
-
-
-
-        </div>
+        <p class="post__item-description text-margin-bottom-xs text-center">
+            Описание
+        </p>
         <div class="post__item-media flex-justify-start">
             <div class="post__item-author">
                 <a class="post__item-author-link author-mc text-color-primary-300" href=" /categories/linux/2020-12-16-kak-sdelat-iz-gnome-3-podobii-macos-na-ubuntu-20-04.html"><span class="post__item-author-icon icon-user"></span><span> mcshell</span></a>
@@ -523,6 +475,7 @@
         </div>
     </div>
 </article> <!-- end post__item --></div><!-- end  flex-col-->
+
             
             <div class="flex-col flex-col-4"><article class="hover-box-transform post__item">
     <div class="post__item-img">
@@ -546,41 +499,9 @@
         <div class="post__item-title title heading-4 text-center text-margin-bottom-xs">
             <a class="hover-color-primary-300" href="/categories/linux/2020-12-15-instrumenty-generator-neonovogo-teksta-dlya-css-i-html.html">Boxicons - набор бесплатных векторных иконок</a>
         </div>
-        <div class="post__item-description text-margin-bottom-xs text-center">
-            <p>Первый параграф статьи</p>
-
-
-<p>Boxicons - это простой. но стильный набор бесплатных векторных иконок, тщательно созданный для дизайнеров и разработчиков для использования в вашем проекте. Набор насчитывает 1500 иконок. </p>
-<a class="button button-primary button-sm text-center" href="https://boxicons.com/" target="_blank">Официальный сайт</a>
-<img src="images/2020/2020-12-15-instrumenty-generator-neonovogo-teksta-dlya-css-i-html-/1t.png" alt="">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Alias, architecto asperiores beatae consequatur cum cupiditate
-    ea illo ipsa ipsum maiores maxime necessitatibus nihil nisi
-    numquam obcaecati, odit officia quo, voluptates. </p>
-<h4>Heading 4</h4>
-<ul class="list list-marked">
-    <li>Lorem Ipsum is simply dummy </li>
-    <li>Lorem Ipsum is simply dummy </li>
-    <li>Lorem Ipsum is take dummy </li>
-    <li>Lorem Ipsum is simply dummy </li>
-    <li>Lorem Ipsum is simply dummy </li>
-</ul>
-<h4>Heading 4</h4>
-<ol class="list list-ordered">
-    <li>Lorem Ipsum is simply dummy </li>
-    <li>Lorem Ipsum is simply dummy </li>
-    <li>Lorem Ipsum is take dummy </li>
-    <li>Lorem Ipsum is simply dummy </li>
-    <li>Lorem Ipsum is simply dummy </li>
-</ol>
-<h4>Heading 4</h4>
-<p> <span class="text-font-weight-bold">bold</span> <span class="text-strike">strike</span>Lorem <b>ipsum</b> dolor sit amet, <span class="text-font-style-italic">italic </span>consectetur adipisicing elit.
-    <a href="#" class="link-hover">link hover </a> <a href="#">link </a> Alias, architecto asperiores beatae consequatur cum cupiditate
-    ea <mark>mark</mark> illo ipsa ipsum maiores maxime necessitatibus nihil nisi
-    numquam obcaecati, odit officia quo, voluptates. </p>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-        </div>
+        <p class="post__item-description text-margin-bottom-xs text-center">
+            Boxicons - это простой. но стильный набор бесплатных векторных иконок, тщательно созданный для дизайнеров и разработчиков для использования в вашем проекте. Набор насчитывает 1500 иконок.
+        </p>
         <div class="post__item-media flex-justify-start">
             <div class="post__item-author">
                 <a class="post__item-author-link author-mc text-color-primary-300" href=" /categories/linux/2020-12-15-instrumenty-generator-neonovogo-teksta-dlya-css-i-html.html"><span class="post__item-author-icon icon-user"></span><span> mcshell</span></a>
@@ -598,16 +519,18 @@
         </div>
     </div>
 </article> <!-- end post__item --></div><!-- end  flex-col-->
+
             
         </div>
     </div>
 </section> <!-- end section news -->
+
     <section class="hobbies section-lg">
     <div class="container container-md">
         <div class="heading-3 text-center text-margin-bottom-xs">Hobbies & Interests</div>
-        <p class="text-center text-max-width-700 text-color-dark-gray-700">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+        <p class="text-center text-max-width-700 text-color-secondary-for-mode">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
         <div class="grid grid-col-4 grid-gap-1-5 block-margin-top-lg">
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -615,7 +538,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -623,7 +546,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -631,7 +554,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -639,7 +562,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -647,7 +570,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -655,7 +578,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -663,7 +586,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -671,7 +594,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -679,7 +602,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -687,7 +610,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -695,7 +618,7 @@
                     <span class="heading-6">Developing</span>
                 </div>
             </div> <!-- end hobbies__item -->
-            <div class="hobbies__item hover-box-transform bg-color-dark-gray-50 flex flex-align-items-center border-radius-md">
+            <div class="hobbies__item hover-box-transform flex flex-align-items-center border-radius-md">
                 <div class="hobbies__item-icon text-padding-sm">
                     <span class="icon-calendar"></span>
                 </div>
@@ -707,7 +630,8 @@
         </div> <!-- end grid-->
     </div> <!-- end container-->
 </section> <!-- end section hobbies-->
-    <section class="counter section-lg">
+
+    <section class="counter section-lg section-bg">
     <div class="counter-bg text-margin-lg border-radius-lg block-padding-xl">
         <div class="container container-md">
             <div class="counter__inner border-radius-xl text-center flex flex-justify-center">
@@ -759,10 +683,11 @@
         </div>
     </div>
 </section> <!-- end section counter -->
+
     <section class="portfolio section-lg">
     <div class="container container-md">
         <div class="heading-3 text-center text-margin-bottom-xs">My Portfolio</div>
-        <p class="text-center text-max-width-700 text-color-dark-gray-700">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+        <p class="text-center text-max-width-700">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
         <div class="portfolio__inner block-margin-top-md">
             <ul class="portfolio__nav flex flex-justify-center nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li class="text-margin-right-xs ">
@@ -1027,6 +952,7 @@
         </div>
     </div>
 </section> <!-- end section portfolio -->
+
 </main> <!-- end main -->
 
 <footer class="footer">

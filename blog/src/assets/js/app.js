@@ -49,12 +49,7 @@ $(document).ready(function () {
     // =include components/octocomments.js
     //=include components/post_heading.js
     //=include components/adp_mmenu.js
+    //=include components/contactus.js
 
 });
 //// =include components/form_validate.js---
-
-
-
-
-
-

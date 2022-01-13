@@ -52,7 +52,8 @@
     padding: 4rem 0
   &-xl
     padding: 5rem 0
-
+  &-bg
+    background-color: var(--section-bg)
 
 .poduct__item
   width: 100%
@@ -86,7 +87,7 @@
   font-weight: 400
   line-height: 1em
   /* colors */
-  color: rgba(#000,0.5)
+  color: var(--text-color-primary-for-mode-05)
   &:before
     content: '\e023'
     font-family: $font-elegant-icons
@@ -179,7 +180,7 @@
   &-primary-outline
     color: $color-primary-300
     border-color: $color-primary-300
-    background-color: $white-std
+    background-color: var(--btn-primary-outline-bg)
     &:visited
       color: $color-primary-300
     &:hover
@@ -272,7 +273,7 @@ h6, .heading-6
 p
   font-size: 1.2em
   line-height: 1.8em
-  color: $color-for-tag-p
+  color: var(--p-color)
   a
     &:not(.button)
       &:hover
@@ -495,6 +496,9 @@ p
   &-color-primary-900
     color: $color-primary-900
 
+  // for dark mode
+  &-color-secondary-for-mode
+    color: var(--text-color-secondary-for-mode)
 
 //
 //
@@ -516,8 +520,18 @@ p
 //
 //
 .block
+  $xs: 1em
+  $sm: 2em
+  $md: 3em
+  $lg: 4em
+  $xl: 5em
+
+  @media screen and (max-width: 1336px)
+    @for $i from 1 through 4
+      $xl: #{$i}/2 + em
+
   &-margin-bottom-xs
-    margin-bottom: 1em
+    margin-bottom: $xs
   &-margin-bottom-sm
     margin-bottom: 2em
   &-margin-bottom-md
@@ -537,6 +551,7 @@ p
     margin-top: 4em
   &-margin-top-xl
     margin-top: 5em
+
 
   &-padding-xs
     padding: 1em
@@ -576,7 +591,7 @@ mark,.mark
   font-size: 1.1rem
   line-height: 1.4em
   font-weight: 400
-  color: $color-dark-700
+  color: var(--p-color)
   > li
     &:before
       content: ''
@@ -683,7 +698,6 @@ mark,.mark
       input[type="submit"]
         height: 100%
         width: 100%
-  &-lg
 
   &-item
     position: relative
@@ -701,11 +715,12 @@ mark,.mark
     position: relative
     width: 100%
     border-radius: 2em
-    border: 1px solid #eee
+    border: 1px solid var(--form-input-border)
     line-height: 1em
     font-size: 1rem
     padding: 1em 1.5rem
-    color: $color-dark-900
+    background-color: var(--form-input-bg)
+    color: var(--form-input-color)
     display: block
     margin:  0 auto
     &.form-input-error
@@ -874,7 +889,7 @@ input:not([type="submit"]):active + .list-input-requirements
     &:hover
       transition: 0.3s ease
       border-color: transparent
-      background-color: $white-std
+      background-color: var(--hover-box-transform)
       box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15)
       transform: translateY(-$tranform-size)
   &-color-primary-50
@@ -925,9 +940,9 @@ input:not([type="submit"]):active + .list-input-requirements
 
 .headings-list
   padding: 1rem 2rem 1rem 3rem
-  background-color: $color-secondary-50
+  background-color: var(--headings-list)
   border-radius: 1rem
-  color: $color-dark-600
+  color: var(-p-color)
   font-size: 1rem
   line-height: 1.4em
   list-style: decimal

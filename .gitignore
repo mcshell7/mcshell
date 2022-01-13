@@ -112,5 +112,3 @@ blog/node_modules
 /package-lock.json
 
 /blog/blog/.jekyll-cache
-/blog/blog/_site
-/blog/blog/site

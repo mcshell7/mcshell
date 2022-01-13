@@ -44,6 +44,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^4.5.3",
     "gulp-imagemin": "^7.1.0",
+    "kwesforms": "^2.1.20",
     "octomments": "^1.0.5",
     "particles.js": "^2.0.0",
     "simple-line-icons": "^2.5.5",

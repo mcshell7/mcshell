@@ -1,28 +1,28 @@
 @import "../std/vars"
 .header
-  border-bottom: 1px solid $color-secondary-50
   /* sizes */
   min-height: 3.333rem
   /* colors */
-  background-color: $white
+  background-color: var(--post-item-bg)
   transition: 0.2s ease-in-out
-  color: $white-std
+  color: $header-color-text
+
   ~ main
     padding-top: 51px
   &-container
     height: 50px
   &.transparent
-    color: $white
+    color: $header-color-text
     .header__search-btn
-      color: $white
+      color: $header-color-text
   &:not(&.sticky)
-    //color: $white-std
     color: $black
-    background-color: $white
+    background-color: var(--post-item-bg)
     .header__search-btn
       color: $white-std
+
   &.sticky
-    color: $black
+    color: $header-color-text
     position: fixed
     top: 0
     left: 0
@@ -30,8 +30,7 @@
     width: 100%
     transition: 0.5s ease-in-out
     &:not(.transparent)
-      background-color: var(--color-header-bg)
-
+      background-color: var(--post-item-bg)
   &.transparent
     &:not(.sticky)
       background-color: transparent
@@ -40,7 +39,7 @@
     top: 0
     left: 0
     width: 100%
-    z-index: 10
+    z-index: 1000
   .container
     height: 100%
   &__inner
@@ -65,6 +64,7 @@
     /* sizes */
     height: 100%
   &__search-btn
+    display: inline-block
     /* link */
     cursor: pointer
     /* sizes */

@@ -1,5 +1,11 @@
 .post
   margin-bottom: 5rem
+  background-color: var(--post-item-bg)
+  border-radius: .75rem
+  &-content
+    padding: 0 1rem
+  header
+    padding: 0 1rem
   &-footer
     margin: 1rem 0
   &-img
@@ -16,20 +22,21 @@
     padding-left: .5em
     margin-bottom: 1rem
   &-media-item
-    padding: 0.5rem 1.5rem
-    color: $color-secondary-300!important
+    padding: .5rem 1.5rem
+    // color: $color-secondary-300!important
     a
-      color: $color-secondary-300!important
+      // color: $color-secondary-300!important
 
     &:nth-child(1),&:nth-child(2)
       border-right: 1px solid $color-secondary-100
   &-nav
-    background-color: $white-std
+    background-color: var(--post-item-bg)
+    border-radius: var(--post-nav-border-radius)
     padding: 2rem 0
     //border-radius: 1rem
-    border-bottom: 1px solid $gray
+    border-bottom: 1px solid var(--post-nav-border)
     //border: 1px solid $gray
-    border-top: 1px solid $gray
+    border-top: 1px solid var(--post-nav-border)
 
   &-nav-title
     font-size: 1.2rem
@@ -54,7 +61,7 @@
     display: block
     &:hover
       &:before
-        background-color: $color-secondary-200
+        background-color: $color-primary-200
     &:before
       font-family: $font-elegant-icons
       font-size: 2rem
@@ -62,7 +69,7 @@
       line-height: 1em
       border-radius: 50%
       padding: 1rem
-      background-color: $color-secondary-300
+      background-color: $color-primary-300
       width: 2em
       height: 2em
       text-align: center

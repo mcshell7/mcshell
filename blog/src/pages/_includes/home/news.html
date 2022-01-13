@@ -1,10 +1,10 @@
-<section class="news section-lg bg-color-dark-gray-50">
+<section class="news section-lg section-bg">
     <div class="container container-md">
         <div class="heading-3 text-center text-margin-bottom-xs">Work Expertise</div>
-        <p class="text-center text-max-width-700 text-color-dark-gray-700">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
+        <p class="text-center text-max-width-700 text-color-secondary-for-mode">Obviously I'm a Web Designer. Experienced with all stages of the development cycle for dynamic web projects.</p>
         <div class="flex block-margin-top-lg">
             {% for post in site.categories.linux limit:3 offset:0 %}
-            {% include posts/post__item-col-4.html %}
+            {% include posts/post__item-col-4-short.html %}
             {% endfor %}
         </div>
     </div>

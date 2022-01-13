@@ -6,13 +6,11 @@ function checkHeader(){
     let heightAdminHeader = $(headerMain).outerHeight() - 51;
     if (scrollPosition > heightAdminHeader){
         document.querySelector('.header').classList.add('sticky');
-        document.querySelector('.header').classList.add('transparent');
+        // document.querySelector('.header').classList.add('transparent');
     }
     else {
         document.querySelector('.header').classList.remove('sticky');
-        document.querySelector('.header').classList.remove('transparent');
+        // document.querySelector('.header').classList.remove('transparent');
     }
 }
 window.addEventListener('scroll', checkHeader);
-
-

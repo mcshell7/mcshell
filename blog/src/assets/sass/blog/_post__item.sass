@@ -3,8 +3,8 @@
   width: 100%
   border-radius: 10px
   /* colors */
-  background-color: #ffffff
-  color: $black-std
+  background-color: var(--post-item-bg)
+  color: var(--text-color-primary-for-mode)
   box-shadow: rgba(0, 0, 0, 0.07) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px
   overflow: hidden
   transition: 0.3s ease-in-out
@@ -50,7 +50,7 @@
     flex-direction: column
   &-title
     /* colors */
-    color: $black-std
+    color: var(--text-color-primary-for-mode)
   &-img
     /* sizes */
     position: relative
@@ -141,4 +141,8 @@
       &:hover
         /* colors */
         color: $color-primary-300
+  &-description
+    line-height: 1.4em
 
+* + .post__item-description
+  margin-top: 0
