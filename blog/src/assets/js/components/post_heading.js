@@ -66,7 +66,7 @@
                             $('<li>')
                                 .append(
                                     $('<a>')
-                                        .attr( 'href', '#' + id )
+                                        .attr( 'href', document.location.href + '#' + id )
                                         .text( this.innerHTML )
                                 )
                         );

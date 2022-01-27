@@ -1,9 +1,11 @@
 .post
-  margin-bottom: 5rem
+  margin-bottom: 4rem
   background-color: var(--post-item-bg)
   border-radius: .75rem
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.07),0 10px 10px -5px rgba(0,0,0,.04)
   &-content
     padding: 0 1rem
+    margin-top: 1rem
   header
     padding: 0 1rem
   &-footer
@@ -76,6 +78,7 @@
       color: $white-std
 
 .content
+  box-sizing: border-box
   p
     margin-bottom: 0.8em
   h1,h2,h3,h4,h5,h6 + p
@@ -91,6 +94,21 @@
       font-weight: 400
   h1,h2,h3,h4,h5,h6 + p
     margin-top: 0.8em
+  *+.content-img-fancybox
+    margin: 2em 0
+  img
+    display: block
+    max-width: 100%
+    object-fit: cover
+    height: auto
+    width: 100%
+  .content-img-fancybox
+    border-radius: .75rem
+    display: block
+    overflow: hidden
+  @for $i from 1 through 9
+    .max-h-#{$i}00
+      max-height: #{$i}00px
 
 body.bc-embed-mode .bc-content
     border-radius: 1rem!important

@@ -25,7 +25,11 @@
                                 <span>{{ page.date | date: "%-d-%m-%Y %H:%M" }}</span>
                             </div>
                             <div class="post-author post-media-item">
-                                <a class="post-author-link author-mc text-color-primary-300" href="#"><span class="post__item-author-icon icon-user"></span><span>{{ page.author }}</span></a>
+                              {% assign author = site.authors | where: 'short_name', page.author | first %}
+                              {% if author %}
+                                <a class="post-author-link author-mc text-color-primary-300" href="{{ author.url }}"><span class="post__item-author-icon icon-user"></span><span>{{ page.author }}</span></a>
+                              {% endif %}
+
                             </div>
                             <a href="#" class="post-media-item post-comments icon-count-mc text-color-primary-300 ">
                                 <span class="post-comments-icon icon_comment"></span>
@@ -74,4 +78,3 @@
         </div>
     </div>
 </main>
-

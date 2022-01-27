@@ -10,7 +10,7 @@
     <div class="post__item-content">
         <div class="post__item-media text-margin-bottom-xs">
             <div class="">
-                <span class="category-item-mc"><a class=" text-uppercase" href="{{ post.url }}">{{ post.catname }}</a></span>
+                <span class="category-item-mc"><a class="text-uppercase" href="/{{ site.category_dir }}/{{ post.categories }}">{{ post.catname }}</a></span>
             </div>
         </div>
         <div class="post__item-title title heading-3">
@@ -24,7 +24,10 @@
                 <span>{{ post.date | date: "%-d-%m-%Y %H:%M" }}</span>
             </div>
             <div class="post__item-author text-margin-right-xs">
-                <a class="post__item-author-link author-mc text-color-primary-300" href=" {{ post.url }}"><span class="post__item-author-icon icon-user"></span><span> {{ post.author }}</span></a>
+              {% assign author = site.authors | where: 'short_name', post.author | first %}
+              {% if author %}
+              <a class="post__item-author-link author-mc text-color-primary-300" href="{{ author.url }}"><span class="post__item-author-icon icon-user"></span><span> {{ post.author }}</span></a>
+              {% endif %}
             </div>
             <div class="post__item-media-icons">
                 <a href="{{ post.url }}#disqus_thread" class="post__item-views icon-count-mc text-color-primary-300 text-margin-right-xs">

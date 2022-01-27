@@ -25,7 +25,7 @@
         </p>
         <div class="post__item-media flex-justify-start">
             <div class="post__item-author">
-                <a class="post__item-author-link author-mc text-color-primary-300" href=" {{ post.url }}"><span class="post__item-author-icon icon-user"></span><span> {{ post.author }}</span></a>
+                <a class="post__item-author-link author-mc text-color-primary-300" href="{{ post.author.url }}"><span class="post__item-author-icon icon-user"></span><span> {{ post.author }}</span></a>
             </div>
             <div class="post__item-media-icons">
                 <a href="{{ post.url }}#disqus_thread" class="post__item-views icon-count-mc text-color-primary-300 text-margin-right-xs">

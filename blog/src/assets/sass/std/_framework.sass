@@ -75,10 +75,14 @@
 // blockquote
 // i
 // b
+.blockquote
 
-
-
-
+.usefull
+  background-color: var(--headings-list)
+  padding: 1rem 2rem
+  background-color: var(--headings-list)
+  border-radius: 1rem
+  color: var(-p-color)
 
 /* mc - prefix (name of my theme) */
 .date-mc
@@ -586,7 +590,6 @@ mark,.mark
     color: $color-primary-300
 /* LISTS STYLE ordered & marked */
 .list
-  text-indent: -1.666em
   padding: 1rem 0 1rem 1.666em
   font-size: 1.1rem
   line-height: 1.4em
@@ -610,17 +613,18 @@ mark,.mark
         border-radius: 50%
         background: #d7d7d7
   &-ordered
+    padding-left: 0
     counter-reset: li
     > li
       position: relative
-      padding-left: 1.666em
       &:before
         content: counter(li, decimal) "."
         counter-increment: li
-        position: absolute
-        top: 0
-        left: 0
+        position: initial
         display: inline-block
+        width: auto
+        height: auto
+        margin: 2px
   &-input-requirements
     font-size: 0.875rem
     padding: 0 0 0 1.666rem
@@ -953,3 +957,9 @@ input:not([type="submit"]):active + .list-input-requirements
         color: $color-dark-500
   li+li
     margin-top: 0.6em
+
+.fs
+  &-28
+    font-size: 28px
+  &-36
+    font-size: 36px

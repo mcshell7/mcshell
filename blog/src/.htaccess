@@ -9,7 +9,7 @@ SetEnvIf X-Forwarded-Proto https HTTPS=on
 
 RewriteCond %{HTTP_HOST} .
 RewriteCond %{HTTP_HOST} www.khamardiuk.com [NC]
-RewriteRule (.*) http://khamardiuk.com/$1 [R=301,L]
+RewriteRule (.*) http://mcshell.net/$1 [R=301,L]
 
 RewriteCond %{HTTP_USER_AGENT} wget [NC]
 RewriteRule .* - [F]

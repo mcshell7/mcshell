@@ -108,8 +108,10 @@ function html() {
 function htacces() {
     return src(
         [
-            'src/.htaccess',
-            'src/*.json'
+            '.htaccess',
+            '*.json',
+            'robots.txt',
+            'sitemap.xml',
         ])
         .pipe(dest('../blog/blog/'))
         .pipe(browsersync.reload({ stream: true }));
