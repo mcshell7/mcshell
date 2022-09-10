@@ -107,8 +107,19 @@ dist
 #Custom...
 
 blog/node_modules
+./blog/node_modules
+/blog/node_modules
+../blog/node_modules
 
 /.DS_Store
 /package-lock.json
 
 /blog/blog/.jekyll-cache
+
+blog/blog/vendor/
+/blog/blog/vendor/
+./blog/blog/vendor/
+../blog/blog/vendor/
+
+.idea
+./.idea
